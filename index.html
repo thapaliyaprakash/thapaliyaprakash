@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prakash Thapaliya - Personal Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            animation: fadeInBackground 3s ease-out;
+        }
+
+        @keyframes fadeInBackground {
+            0% { background-color: #fff; }
+            100% { background-color: #f7f7f7; }
+        }
+
+        .navbar {
+            background-color: #007bff;
+            animation: slideIn 1s ease-out;
+        }
+
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(0); }
+        }
+
+        .header {
+            text-align: center;
+            margin-top: 50px;
+            opacity: 0;
+            animation: fadeIn 3s forwards, textPulse 10s ease-in-out;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            animation: colorShift 10s infinite alternate;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            color: #555;
+            animation: floatText 10s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes colorShift {
+            0% { color: #007bff; }
+            50% { color: #28a745; }
+            100% { color: #17a2b8; }
+        }
+
+        @keyframes floatText {
+            0% { transform: translateY(0); opacity: 1; }
+            50% { transform: translateY(-10px); opacity: 0.8; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        .card {
+            border-radius: 15px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+            opacity: 0;
+            animation: fadeInCard 2s forwards;
+        }
+
+        @keyframes fadeInCard {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-btn {
+            background-color: #28a745;
+            color: white;
+            font-size: 1.2rem;
+            padding: 10px 30px;
+            border-radius: 30px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            text-decoration: none;
+        }
+
+        .cta-btn:hover {
+            background-color: #218838;
+            transform: translateY(-5px);
+        }
+
+        .social-icons a {
+            margin: 10px;
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+            color: #007bff;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px 0;
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+        <a class="navbar-brand" href="#">Prakash Thapaliya</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#services">What I Offer</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact Me</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Header Section -->
+<header class="header">
+    <h1>Prakash Thapaliya</h1>
+    <p>BIM student from Asian School of Management & Technology</p>
+    <p>I am here to support your journey towards mastering technology and achieving career success.</p>
+    <a href="#services" class="cta-btn">Learn More</a>
+</header>
+
+<!-- What I Offer Section -->
+<section id="services" class="services mt-5">
+    <div class="container">
+        <h2 class="text-center">What I Offer</h2>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h4>Online Class</h4>
+                        <p>Learn AI, Python, Django online with real projects.</p>
+                        <a href="#" class="cta-btn">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h4>Tech Consultation</h4>
+                        <p>I help organizations go digital and increase revenue.</p>
+                        <a href="#" class="cta-btn">Get Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Me Section -->
+<section id="contact" class="contact mt-5">
+    <div class="container text-center">
+        <h2>Contact Me</h2>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/prakash.thapaliya.33" class="btn btn-light" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+            <a href="https://www.youtube.com/@prakashthapaliya11" class="btn btn-light" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+            <a href="https://github.com/thapaliyaprakash" class="btn btn-light" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="mailto:prakashthapaliya@gmail.com" class="btn btn-light"><i class="fas fa-envelope"></i> Email</a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>&copy; 2025 Prakash Thapaliya. All Rights Reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
